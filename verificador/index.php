@@ -16,7 +16,7 @@
 // SE NÃO J == "11 - RESTO DA DIVISÃO"
 
 // $cpf = "196.080.967-90 \n";
-$cpf = "165.392.487-09 \n";
+$cpf = "490.279.076-92 \n";
 $cpf = explode("-", $cpf);
 $cpf[0] = str_replace(".", "", $cpf[0]);
 
