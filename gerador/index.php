@@ -79,4 +79,4 @@ for($i = 1; $i < 10; $i++){
 $checkers = getCheckers($cpf_em_analise);
 $cpf_formatado .= $checkers[0];
 $cpf_formatado .= $checkers[1];
-echo $cpf_formatado;
+echo $cpf_formatado . "\n";

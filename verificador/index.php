@@ -16,24 +16,6 @@
 // SE NÃO J == "11 - RESTO DA DIVISÃO"
 
 // $cpf = "196.080.967-90 \n";
-$cpf = "490.279.076-92 \n";
-$cpf = explode("-", $cpf);
-$cpf[0] = str_replace(".", "", $cpf[0]);
-
-$j_recebido = $cpf[1][0];
-$k_recebido = $cpf[1][1];
-
-if(verificador($cpf, $j_recebido)){
-    if(verificador($cpf, $k_recebido, $j_recebido)){
-        resposta();
-    }
-    else{
-        resposta("K errado!", 1);
-    }
-}
-else{
-    resposta("J errado!", 1);
-}
 
 function resposta($resp = "", $trigger = 0){
     if($trigger == 0){
@@ -78,4 +60,23 @@ function verificador($cpf, $param, $trigger = ""){
             return 0;
         }
     }
+}
+
+$cpf = "490.279.076-92 \n";
+$cpf = explode("-", $cpf);
+$cpf[0] = str_replace(".", "", $cpf[0]);
+
+$j_recebido = $cpf[1][0];
+$k_recebido = $cpf[1][1];
+
+if(verificador($cpf, $j_recebido)){
+    if(verificador($cpf, $k_recebido, $j_recebido)){
+        resposta();
+    }
+    else{
+        resposta("K errado!", 1);
+    }
+}
+else{
+    resposta("J errado!", 1);
 }
